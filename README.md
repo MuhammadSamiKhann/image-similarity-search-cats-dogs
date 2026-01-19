@@ -10,7 +10,7 @@ Upload any cat 🐱 or dog 🐶 image → get the **top 5 most visually similar*
 - One-time embedding computation (saved for fast reuse)
 - Cosine similarity ranking
 - Jupyter Notebook visualization
-
+ 
 ## 📊 Dataset
 
 - **Total images**: 25,000 (20,000 train + 5,000 test)
