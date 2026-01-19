@@ -1,7 +1,7 @@
 # 🐶🐱 Image Similarity Search – Cats & Dogs
 
-A clean and simple **image similarity search** system using **pre-trained ResNet18** (ImageNet).  
-Upload any cat 🐱 or dog 🐶 image as query → get the **top 5 most visually similar** images from the dataset using **cosine similarity** on deep features.
+A simple **image similarity search** system using **pre-trained ResNet18**.  
+Upload any cat 🐱 or dog 🐶 image → get the **top 5 most visually similar** images using **cosine similarity**.
 
 ## ✨ Features
 
@@ -9,56 +9,65 @@ Upload any cat 🐱 or dog 🐶 image as query → get the **top 5 most visually
 - 512-dimensional image embeddings
 - One-time embedding computation (saved for fast reuse)
 - Cosine similarity ranking
-- Beautiful Jupyter Notebook visualization with Matplotlib
+- Jupyter Notebook visualization
 
 ## 📊 Dataset
 
-- **Total images**: 25,000
-- **Training set**: 20,000 images
-- **Test set**: 5,000 images
+- **Total images**: 25,000 (20,000 train + 5,000 test)
 - **Classes**: Cats 🐱 and Dogs 🐶
 
-📥 Download:  
-[Dog and Cat Classification Dataset – Kaggle](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
+📥 [Download Dataset from Kaggle](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
 
 **Folder structure:**
+```
 data/
 └── train/
-├── cats/
-└── dogs/
+    ├── cats/
+    └── dogs/
+```
 
-text## 🛠️ Installation
-
-# Install dependencies
+## 🛠️ Installation
+```
 pip install torch torchvision torchaudio
-pip install numpy scikit-learn matplotlib pillow tqdm
-Requirements: Python 3.8+
-GPU optional (but much faster for embedding extraction)
-🚀 Quick Start
+pip install numpy scikit-learn matplotlib pillow tqdm jupyter
+```
 
-Clone this repository
+## 🚀 Quick Start
 
-Place the dataset in data/train/
-Launch Jupyter Notebook
+1. Download dataset and extract to `data/train/`
+2. Launch Jupyter: `jupyter notebook`
+3. Run all cells in `notebook.ipynb`
+4. Upload your query image and see results! 🐾
 
-Run all cells in sequence
-Set your query image (any cat/dog photo):
+## 🎯 How It Works
 
-Enjoy the results! 🐾
+1. **Extract** 512-D features from images using ResNet18
+2. **Save** embeddings for fast reuse
+3. **Query** with any image
+4. **Calculate** cosine similarity
+5. **Return** top 5 matches
 
-📸 What You'll See
+## 📂 Project Structure
+```
+image-similarity-search/
+├── data/train/          # Dataset folder
+├── embeddings/          # Saved embeddings (auto-generated)
+├── notebook.ipynb       # Main notebook
+└── README.md
+```
 
-Your query image
-Top 5 most similar images
-Cosine similarity score for each match
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
+Python • PyTorch • ResNet18 • NumPy • scikit-learn • Matplotlib
 
-Python
-Jupyter Notebook
-PyTorch & TorchVision
-ResNet18 (pretrained)
-NumPy
-scikit-learn
-Matplotlib & Pillow
-tqdm
+## 📄 Author 
+
+Muhammad Sami Khan
+
+---
+
+<div align="center">
+
+⭐ Star this repo if you found it helpful!
+
+</div>
